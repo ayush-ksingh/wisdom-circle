@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign in | Topmate Replica</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <div class="split-layout">
+    <!-- Left Column (Form) -->
+    <div class="left-pane">
+      
+      <!-- Header -->
+      <header class="top-header">
+        <div class="logo">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="#000000" stroke-width="3"/>
+            <path d="M15 12L9 8V16L15 12Z" fill="#F43F5E"/>
+          </svg>
+          <span class="logo-text">topmate</span>
+        </div>
+        <button class="btn-outline">Create Account</button>
+      </header>
+
+      <!-- Center Container for Form -->
+      <main class="form-container">
+        
+        <div class="form-heading">
+          <h1>Sign in</h1>
+          <p>Sign in to join Calls and manage bookings</p>
+        </div>
+
+        <div class="social-login">
+          <a class="btn-social" href="https://accounts.google.com/o/oauth2/v2/auth?client_id=225410318061-bqpcs5mfud453nb16ib992tiea9d8alb.apps.googleusercontent.com&redirect_uri=https%3A%2F%2Ftopmate.io%2Fauth%2Fgoogle&state=&scope=profile%20email&response_type=code&access_type=offline&include_granted_scopes=true">
+            <svg width="20" height="20" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+              <path fill="#FFC107" d="M43.611,20.083H42V20H24v8h11.303c-1.649,4.657-6.08,8-11.303,8c-6.627,0-12-5.373-12-12c0-6.627,5.373-12,12-12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C12.955,4,4,12.955,4,24c0,11.045,8.955,20,20,20c11.045,0,20-8.955,20-20C44,22.659,43.862,21.35,43.611,20.083z"/>
+              <path fill="#FF3D00" d="M6.306,14.691l6.571,4.819C14.655,15.108,18.961,12,24,12c3.059,0,5.842,1.154,7.961,3.039l5.657-5.657C34.046,6.053,29.268,4,24,4C16.318,4,9.656,8.337,6.306,14.691z"/>
+              <path fill="#4CAF50" d="M24,44c5.166,0,9.86-1.977,13.409-5.192l-6.19-5.238C29.211,35.091,26.715,36,24,36c-5.202,0-9.619-3.317-11.283-7.946l-6.522,5.025C9.505,39.556,16.227,44,24,44z"/>
+              <path fill="#1976D2" d="M43.611,20.083H42V20H24v8h11.303c-0.792,2.237-2.231,4.166-4.087,5.571c0.001-0.001,0.002-0.001,0.003-0.002l6.19,5.238C36.971,39.205,44,34,44,24C44,22.659,43.862,21.35,43.611,20.083z"/>
+            </svg>
+            Continue with Google
+          </a>
+          
+          <a class="btn-social" href="https://www.linkedin.com/oauth/v2/authorization?response_type=code&client_id=785fgiv7tk10dl&redirect_uri=https%3A%2F%2Ftopmate.io%2Fauth%2Flinkedin%3Fsource%3Dexpert_login&state=&scope=r_liteprofile%20r_emailaddress">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="#0A66C2" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20.447 20.452H16.891V14.881C16.891 13.553 16.866 11.843 15.044 11.843C13.197 11.843 12.913 13.284 12.913 14.786V20.452H9.356V9.006H12.775V10.573H12.822C13.298 9.67 14.464 8.72 16.185 8.72C19.784 8.72 20.447 11.088 20.447 14.168V20.452ZM5.337 7.433C4.195 7.433 3.273 6.51 3.273 5.367C3.273 4.223 4.195 3.3 5.337 3.3C6.478 3.3 7.404 4.223 7.404 5.367C7.404 6.51 6.478 7.433 5.337 7.433ZM7.119 20.452H3.555V9.006H7.119V20.452ZM22.225 0H1.771C0.792 0 0 0.774 0 1.729V22.271C0 23.226 0.792 24 1.771 24H22.222C23.2 24 24 23.226 24 22.271V1.729C24 0.774 23.2 0 22.225 0Z"/>
+            </svg>
+            Continue with LinkedIn
+          </a>
+        </div>
+
+        <div class="separator">
+          <span>Or</span>
+        </div>
+
+        <form class="email-form">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Email" required>
+          </div>
+          
+          <button type="submit" class="btn-primary">Continue</button>
+          <button type="button" class="btn-secondary">Log in with Password</button>
+        </form>
+
+      </main>
+      
+    </div>
+
+    <!-- Right Column (Vector Art) -->
+    <div class="right-pane">
+      <div class="illustration-container">
+        
+        <!-- Abstract CSS/SVG Illustration resembling the original design -->
+        <svg viewBox="0 0 500 500" class="vector-art" xmlns="http://www.w3.org/2000/svg">
+          <!-- Background pink subtle circle -->
+          <circle cx="380" cy="120" r="90" fill="#FFF1F2" opacity="0.8"/>
+          <!-- Desk -->
+          <rect x="100" y="250" width="220" height="20" fill="#111827" />
+          <rect x="120" y="270" width="8" height="150" fill="#111827" />
+          <rect x="300" y="270" width="8" height="150" fill="#111827" />
+          
+          <!-- Computer -->
+          <rect x="140" y="140" width="85" height="70" rx="4" fill="white" stroke="#111827" stroke-width="3" />
+          <rect x="145" y="145" width="75" height="50" fill="#111827" />
+          <rect x="175" y="210" width="15" height="20" fill="white" stroke="#111827" stroke-width="2"/>
+          <ellipse cx="182.5" cy="235" rx="20" ry="5" fill="white" stroke="#111827" stroke-width="2"/>
+
+          <!-- Person Abstract -->
+          <path d="M350 200 Q 300 180 250 200" fill="none" stroke="#111827" stroke-width="5" stroke-linecap="round"/>
+          <circle cx="350" cy="110" r="15" fill="#111827" />
+          <!-- Body/Shirt -->
+          <path d="M330 130 C 310 160, 390 160, 370 130 Z" fill="white" stroke="#111827" stroke-width="2"/>
+          <path d="M325 150 C 310 220, 390 220, 375 150 Z" fill="white" stroke="#111827" stroke-width="2"/>
+          <!-- Legs (Black pants) -->
+          <path d="M325 190 Q 250 220 250 250 L 270 270 Q 350 220 375 190 Z" fill="#111827" />
+          <path d="M340 190 L 340 280 L 360 280 C 370 240, 370 210, 375 190 Z" fill="#111827" />
+          
+          <!-- Chair -->
+          <path d="M375 230 C 400 230, 400 150, 420 150" fill="none" stroke="#111827" stroke-width="3"/>
+          <rect x="360" y="280" width="4" height="60" fill="#111827" />
+        </svg>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

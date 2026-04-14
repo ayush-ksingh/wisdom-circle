@@ -1,0 +1,229 @@
+:root {
+  --bg-color: #FAFAFA;
+  --text-dark: #111827;
+  --text-gray: #4B5563;
+  --text-light: #9CA3AF;
+  --border-light: #E5E7EB;
+  --black: #000000;
+  --gray-button: #F3F4F6;
+  --gray-button-hover: #E5E7EB;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  color: var(--text-dark);
+  background-color: var(--bg-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.split-layout {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+}
+
+/* LEFT PANE */
+.left-pane {
+  flex: 0 0 55%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+}
+
+.top-header {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 32px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.logo-text {
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+  color: #000;
+}
+
+.btn-outline {
+  background: white;
+  color: var(--text-dark);
+  border: 1px solid var(--border-light);
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn-outline:hover {
+  background: var(--bg-color);
+}
+
+.form-container {
+  margin: auto;
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-heading {
+  margin-bottom: 32px;
+}
+.form-heading h1 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  letter-spacing: -0.02em;
+}
+.form-heading p {
+  color: var(--text-gray);
+  font-size: 15px;
+}
+
+.social-login {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+.btn-social {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #FFFFFF;
+  border: 1px solid var(--black);
+  color: var(--black);
+  border-radius: var(--radius-md);
+  padding: 12px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.btn-social:hover {
+  background: var(--bg-color);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.separator {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  color: var(--text-light);
+  font-size: 14px;
+}
+.separator::before, .separator::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--border-light);
+}
+.separator span {
+  padding: 0 16px;
+}
+
+.email-form {
+  display: flex;
+  flex-direction: column;
+}
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.form-group label {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.form-group input {
+  padding: 12px 14px;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  font-size: 15px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+}
+.form-group input:focus {
+  border-color: var(--black);
+}
+
+.btn-primary {
+  background: var(--black);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 12px;
+  transition: opacity 0.2s;
+}
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-secondary {
+  background: var(--gray-button);
+  color: var(--text-dark);
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 14px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn-secondary:hover {
+  background: var(--gray-button-hover);
+}
+
+/* RIGHT PANE */
+.right-pane {
+  flex: 0 0 45%;
+  background-color: var(--bg-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.illustration-container {
+  width: 100%;
+  max-width: 500px;
+}
+.vector-art {
+  width: 100%;
+  height: auto;
+}
+
+/* Responsive constraints */
+@media (max-width: 900px) {
+  .right-pane { display: none; }
+  .left-pane { flex: 1; }
+  .social-login { flex-direction: column; }
+}
